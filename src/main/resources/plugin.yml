@@ -1,0 +1,11 @@
+name: PleasantChats
+version: 1.0.0
+main: mc.pleasantvkchannel.pleasantchats.Main
+authors: [ PleasantVKChannel ]
+commands:
+  pleasantchat:
+    aliases: [ pc ]
+  donatechat:
+    aliases: [ dc ]
+  adminchat:
+    aliases: [ ac ]

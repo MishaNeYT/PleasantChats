@@ -1,0 +1,29 @@
+Settings:
+  Chat: true # Включить или отключить обычный чат
+  DonateChat: true # Включить или отключить донат чат
+  AdminChat: true # Включить или отключить админ чат
+
+# Права доступа
+Permissions:
+  Chat: 'pleasantchat.chat'
+  DonateChat: 'pleasantchat.donatechat'
+  AdminChat: 'pleasantchat.adminchat'
+
+# Формат всем сообщений, можно использовать PlaceholderAPI
+ChatsFormat:
+  Chat: '&f[CHAT] &7%player% &f%message%'
+  NoPerm: '&cУ вас нету доступа к обычному чату!'
+DonateChatFormat:
+  DonateChat: '&a[DONATECHAT] &7%player% &f%message%'
+  Use: '&cИспользуйте команду /dc <сообщение...>'
+  NoPerm: '&cУ вас нету доступа к этому чату!'
+AdminChatFormat:
+  AdminChat: '&c[ADMINCHAT] &7%player% &f%message%'
+  Use: '&cИспользуйте команду /ac <сообщение...>'
+  NoPerm: '&cУ вас нету доступа к этому чату!'
+
+Messages:
+  Reload: '&aПлагин успешно перезагружен!'
+  Error: '&cКоманда введена не правильно!'
+  NoPerm: '&cУ вас нет прав!'
+  OnlyPlayer: '&cКоманду может вводить только игрок!'
