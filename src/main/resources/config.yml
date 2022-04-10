@@ -1,29 +1,46 @@
+# Формат сообщений, можно использовать PlaceholderAPI
+# {player} - ник игрока
+# {message} - сообщение, которое игрок отправил
 Settings:
-  Chat: true # Включить или отключить обычный чат
-  DonateChat: true # Включить или отключить донат чат
-  AdminChat: true # Включить или отключить админ чат
+  DefaultChat: true
+  DonateChat: true
+  AdminChat: true
 
-# Права доступа
-Permissions:
-  Chat: 'pleasantchat.chat'
-  DonateChat: 'pleasantchat.donatechat'
-  AdminChat: 'pleasantchat.adminchat'
+Permission:
+  DefaultChat: 'pleasantchats.defaultchat'
+  MsgChat: 'pleasantchats.msg'
+  DonateChat: 'pleasantchats.donatechat'
+  AdminChat: 'pleasantchats.donatechat'
 
-# Формат всем сообщений, можно использовать PlaceholderAPI
-ChatsFormat:
-  Chat: '&f[CHAT] &7%player% &f%message%'
-  NoPerm: '&cУ вас нету доступа к обычному чату!'
-DonateChatFormat:
-  DonateChat: '&a[DONATECHAT] &7%player% &f%message%'
-  Use: '&cИспользуйте команду /dc <сообщение...>'
-  NoPerm: '&cУ вас нету доступа к этому чату!'
-AdminChatFormat:
-  AdminChat: '&c[ADMINCHAT] &7%player% &f%message%'
-  Use: '&cИспользуйте команду /ac <сообщение...>'
-  NoPerm: '&cУ вас нету доступа к этому чату!'
+DefaultChat:
+  Format: '&7 {player} &8▸ &7{message}'
+  NoPerm: '&cУ вас нет доступа к обычному чату.'
 
+MsgChat:
+  Send: '&6ВЫ &8▸ &f{target} &8▸ &7{message}'
+  To: '&f{target} &8▸ &6ВЫ &8▸ &7{message}'
+
+DonateChat:
+  Format: '&6Чат донатеров &8| &7{player} &8▸ &7{message}'
+  Disable: '&cЧат донатеров отключён.'
+
+AdminChat:
+  Format: '&cЧат администрации &8| &7{player} &8▸ &7{message}'
+  Disable: '&cЧат администраторов отключён.'
+
+# Основные сообщения
 Messages:
-  Reload: '&aПлагин успешно перезагружен!'
-  Error: '&cКоманда введена не правильно!'
-  NoPerm: '&cУ вас нет прав!'
-  OnlyPlayer: '&cКоманду может вводить только игрок!'
+  Reload: '&6PChats &8| &fПлагин &aуспешно &fперезагружен.'
+  Error: '&cКоманда введена неправильно.'
+  NoPerm: '&cУ вас нет прав.'
+  Player: '&cКоманду может писать только игрок.'
+  MsgChat:
+    Use: '&cОшибка, используйте: /msg <игрок> <сообщение>'
+    Offline: '&cПолучатель не в сети.'
+    SendYou: '&cВы не можете отправить сообщение себе.'
+  DonateChat:
+    Use: '&cОшибка, используйте: /donatechat <сообщение>'
+    NoPerm: '&cУ вас нет доступа к этому чату.'
+  AdminChat:
+    Use: '&cОшибка, используйте: /adminchat <сообщение>'
+    NoPerm: '&cУ вас нет доступа к этому чату.'
